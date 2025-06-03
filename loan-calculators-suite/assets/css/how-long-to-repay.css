@@ -1,0 +1,99 @@
+/**
+ * How Long To Repay Calculator CSS
+ */
+
+/* Calculator specific styles */
+.how-long-to-repay-calculator {
+    /* Inherits common styles from lcs-calculator */
+}
+
+/* Results section customization */
+.how-long-to-repay-calculator .lcs-results-section {
+    background-color: #f0f7fa;
+    border-left: 4px solid #0073aa;
+}
+
+.how-long-to-repay-calculator .lcs-result-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.how-long-to-repay-calculator .lcs-result-item {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.how-long-to-repay-calculator .lcs-result-item .lcs-result-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.how-long-to-repay-calculator .lcs-result-item .lcs-result-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0073aa;
+}
+
+/* Chart customization */
+.how-long-to-repay-calculator .lcs-chart-wrapper {
+    height: 300px;
+    margin-top: 10px;
+}
+
+/* Disclaimer styling */
+.how-long-to-repay-calculator .lcs-disclaimer {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.how-long-to-repay-calculator .lcs-note {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Print styles */
+@media print {
+    .how-long-to-repay-calculator {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .how-long-to-repay-calculator .lcs-btn-group {
+        display: none;
+    }
+    
+    .how-long-to-repay-calculator .lcs-chart-wrapper {
+        page-break-inside: avoid;
+    }
+    
+    .how-long-to-repay-calculator .lcs-modal {
+        display: none !important;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .how-long-to-repay-calculator .lcs-result-details {
+        flex-direction: column;
+    }
+    
+    .how-long-to-repay-calculator .lcs-result-item {
+        min-width: 100%;
+    }
+    
+    .how-long-to-repay-calculator .lcs-calculator-container {
+        flex-direction: column;
+    }
+}
