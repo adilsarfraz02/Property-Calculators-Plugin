@@ -98,6 +98,65 @@
     position: relative;
 }
 
+/* Input wrapper for currency and percentage symbols */
+.lcs-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.lcs-currency-symbol {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 16px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.lcs-percentage-symbol {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 16px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.lcs-unit-label {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Adjust input padding when symbols are present */
+.lcs-input-wrapper .lcs-currency-symbol + input {
+    padding-left: 40px !important;
+}
+
+.lcs-input-wrapper input + .lcs-percentage-symbol,
+.lcs-input-wrapper input + .lcs-unit-label {
+    right: 16px;
+}
+
+.lcs-input-wrapper input:has(+ .lcs-percentage-symbol),
+.lcs-input-wrapper input:has(+ .lcs-unit-label) {
+    padding-right: 50px !important;
+}
+
 .lcs-currency {
     position: absolute;
     left: 16px;
@@ -105,7 +164,7 @@
     z-index: 1;
     font-weight: 600;
     font-size: 16px;
-    top: 50%;
+    top: 50% !important;
     transform: translateY(-50%);
 }
 
@@ -148,7 +207,6 @@
 }
 
 .lcs-input-group input {
-    flex: 1;
     padding: 12px 16px;
     border: 2px solid #e5e7eb;
     border-radius: 8px;
@@ -156,8 +214,8 @@
     background-color: #fff;
     transition: all 0.2s ease;
     width: 100%;
-    min-width: 180px;
-    max-width: 300px;
+    min-width: 180px !important;
+    max-width: 300px !important;
 }
 
 .lcs-input-group input:focus {
@@ -169,7 +227,7 @@
 
 .lcs-input-group select {
     margin-left: 12px;
-    padding: 12px 16px;
+    padding: 2px 12px;
     border: 2px solid #e5e7eb;
     border-radius: 8px;
     font-size: 16px;
@@ -200,7 +258,7 @@
 .lcs-toggle-btn {
     flex: 1;
     padding: 12px 18px;
-    background-color: #f8fafc;
+    background-color: #fff;
     border: 2px solid #e5e7eb;
     text-align: center;
     cursor: pointer;
@@ -208,7 +266,7 @@
     font-weight: 600;
     font-size: 15px;
     position: relative;
-    color: #374151;
+    color: blakc !important;
     line-height: 1.2;
 }
 
@@ -237,15 +295,15 @@
 .lcs-number-btn {
     flex: 1;
     padding: 12px 18px;
-    background-color: #f8fafc;
     border: 2px solid #e5e7eb;
+	    background-color: #fff;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 600;
     font-size: 15px;
     position: relative;
-    color: #374151;
+    color: black !important;
     line-height: 1.2;
 }
 
@@ -518,5 +576,24 @@
         width: 100%;
         padding: 16px 24px;
         font-size: 16px;
+    }
+    
+    /* Currency symbol responsive adjustments */
+    .lcs-currency-symbol,
+    .lcs-percentage-symbol {
+        font-size: 14px;
+    }
+    
+    .lcs-unit-label {
+        font-size: 12px;
+    }
+    
+    .lcs-input-wrapper .lcs-currency-symbol + input {
+        padding-left: 35px !important;
+    }
+    
+    .lcs-input-wrapper input:has(+ .lcs-percentage-symbol),
+    .lcs-input-wrapper input:has(+ .lcs-unit-label) {
+        padding-right: 45px !important;
     }
 }
