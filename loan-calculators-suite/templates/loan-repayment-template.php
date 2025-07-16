@@ -86,8 +86,9 @@ if (!defined('ABSPATH')) {
         
         <div class="lcs-result-details">
             <div class="lcs-result-item">
-                <span class="lcs-result-label">Monthly Repayment</span>
+                <span class="lcs-result-label" for="monthly-repayment-result">Monthly Repayment</span>
                 <span class="lcs-result-value" id="monthly-repayment-result">$2,271.16</span>
+                <span class="lcs-result-note" id="repayment-includes-fee" style="display:block;font-size:12px;color:#888;">(Includes loan fee if applicable)</span>
             </div>
             <div class="lcs-result-item">
                 <span class="lcs-result-label">Total Interest / Fee Payable</span>
